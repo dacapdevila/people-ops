@@ -16,19 +16,25 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // Department Seed
+        $this->call(DepartmentSeeder::class);
+
+        // Position Seed
+        $this->call(PositionSeeder::class);
+
         // Create Departments
-        Department::factory()->count(5)->create();
+        // Department::factory()->count(5)->create();
 
         // Create Positions
-        Position::factory()->count(10)->create();
+        // Position::factory()->count(10)->create();
 
         // Create Employees
-        Employee::factory()->count(50)->create();
+        // Employee::factory()->count(50)->create();
 
         // Create Payrolls
-        Payroll::factory()->count(50)->create();
+        // Payroll::factory()->count(50)->create();
 
         // Create Attendances
-        Attendance::factory()->count(100)->create();
+        // Attendance::factory()->count(100)->create();
     }
 }
