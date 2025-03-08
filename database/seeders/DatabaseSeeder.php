@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
         // Position Seed
         $this->call(PositionSeeder::class);
 
-        //
+        // Employee Seed
+        // $this->call(EmployeeSeeder::class);
 
         // Create Departments
         // Department::factory()->count(5)->create();

@@ -18,6 +18,7 @@ class Position extends Model
      */
     protected $fillable = [
         'name',
+        'department_id',
         'salary_range_min',
         'salary_range_max',
     ];

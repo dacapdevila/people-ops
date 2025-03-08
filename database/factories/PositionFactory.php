@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Department;
 use App\Models\Position;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -19,6 +20,7 @@ class PositionFactory extends Factory
     {
         return [
             'name' => $this->faker->jobTitle,
+            'department_id' => Department::query()->inRandomOrder()->first()->id,
             'salary_range_min' => $this->faker->numberBetween(30000, 60000),
             'salary_range_max' => $this->faker->numberBetween(60001, 120000),
         ];
