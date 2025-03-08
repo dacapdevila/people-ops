@@ -19,7 +19,7 @@ class AttendanceFactory extends Factory
     public function definition(): array
     {
         return [
-            'employee_id' => Employee::factory(),
+            'employee_id' => Employee::query()->inRandomOrder()->first()->id,
             'date' => $this->faker->date(),
             'check_in' => $this->faker->time('H:i:s'),
             'check_out' => $this->faker->time('H:i:s'),
