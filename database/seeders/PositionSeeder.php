@@ -17,7 +17,7 @@ class PositionSeeder extends Seeder
             ->pluck('id', 'name');
 
         $humanResourcesId = $departments['Human Resources'] ?? null;
-        $financesId = $departments['Finances'] ?? null;
+        $financesId = $departments['Finance'] ?? null;
         $marketingId = $departments['Marketing'] ?? null;
         $salesId = $departments['Sales'] ?? null;
         $itId = $departments['IT'] ?? null;

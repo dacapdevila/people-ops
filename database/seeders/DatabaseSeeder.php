@@ -16,14 +16,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Department Seed
-        $this->call(DepartmentSeeder::class);
+        $this->call([
+            DepartmentSeeder::class,
+            PositionSeeder::class,
+            EmployeeSeeder::class
+        ]);
 
-        // Position Seed
-        $this->call(PositionSeeder::class);
-
-        // Employee Seed
-        // $this->call(EmployeeSeeder::class);
 
         // Create Departments
         // Department::factory()->count(5)->create();
