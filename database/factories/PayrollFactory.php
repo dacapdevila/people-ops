@@ -19,7 +19,7 @@ class PayrollFactory extends Factory
     public function definition(): array
     {
         return [
-            'employee_id' => Employee::factory(),
+            'employee_id' => Employee::query()->inRandomOrder()->first()->id,
             'base_salary' => $this->faker->numberBetween(35000, 100000),
             'bonus' => $this->faker->numberBetween(1000, 10000),
             'deductions' => $this->faker->numberBetween(500, 5000),
