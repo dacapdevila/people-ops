@@ -18,6 +18,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('employee_id')->constrained('employees')->onDelete('cascade');
             $table->decimal('base_salary', 10, 2);
+            $table->decimal('proportional_salary', 10, 2)->default(0);
             $table->decimal('bonus', 10, 2)->default(0);
             $table->decimal('deductions', 10, 2)->default(0);
             $table->decimal('net_salary', 10, 2);

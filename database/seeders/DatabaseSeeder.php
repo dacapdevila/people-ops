@@ -2,11 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Attendance;
-use App\Models\Department;
-use App\Models\Employee;
-use App\Models\Payroll;
-use App\Models\Position;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,8 +16,8 @@ class DatabaseSeeder extends Seeder
             PositionSeeder::class,
             EmployeeSeeder::class,
             AttendanceSeeder::class,
+            PayrollSeeder::class,
         ]);
-
 
         // Create Departments
         // Department::factory()->count(5)->create();
